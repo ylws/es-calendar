@@ -1,0 +1,23 @@
+{
+  "name": "cfcmcalendar",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cfcm",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylws/es-calendar.git"
+  },
+  "keywords": [
+    "vue",
+    "calendar"
+  ],
+  "bugs": {
+    "url": "https://github.com/ylws/es-calendar/issues"
+  },
+  "homepage": "https://github.com/ylws/es-calendar#readme"
+}
