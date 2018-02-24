@@ -1,32 +1,134 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'D:\\node\\node.exe',
-1 verbose cli   'C:\\Users\\ddd\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'publish' ]
-2 info using npm@3.8.6
-3 info using node@v5.10.0
-4 verbose publish [ '.' ]
-5 silly cache add args [ '.', null ]
-6 verbose cache add spec .
+1 verbose cli [ 'J:\\node\\node.exe',
+1 verbose cli   'J:\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish',
+1 verbose cli   'calendar' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.3
+4 verbose publish [ 'calendar' ]
+5 silly cache add args [ 'calendar', null ]
+6 verbose cache add spec calendar
 7 silly cache add parsed spec Result {
-7 silly cache add   raw: '.',
+7 silly cache add   raw: 'calendar',
 7 silly cache add   scope: null,
+7 silly cache add   escapedName: 'calendar',
 7 silly cache add   name: null,
-7 silly cache add   rawSpec: '.',
-7 silly cache add   spec: 'E:\\laodong\\es-calendar',
-7 silly cache add   type: 'local' }
-8 error addLocal Could not install E:\laodong\es-calendar
-9 verbose stack Error: EISDIR: illegal operation on a directory, read
-9 verbose stack     at Error (native)
-10 verbose cwd E:\laodong\es-calendar
-11 error Windows_NT 6.1.7601
-12 error argv "D:\\node\\node.exe" "C:\\Users\\ddd\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "publish"
-13 error node v5.10.0
-14 error npm  v3.8.6
-15 error code EISDIR
-16 error errno -4068
-17 error syscall read
-18 error eisdir EISDIR: illegal operation on a directory, read
-19 error eisdir This is most likely not a problem with npm itself
-19 error eisdir and is related to npm not being able to find a package.json in
-19 error eisdir a package you are trying to install.
-20 verbose exit [ -4068, true ]
+7 silly cache add   rawSpec: 'calendar',
+7 silly cache add   spec: 'K:\\laodong\\es-calendar\\calendar',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\GIGABYTE\AppData\Roaming\npm-cache\cfcmcalendar\1.3.2\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\GIGABYTE\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle cfcmcalendar@1.3.2~prepublish: cfcmcalendar@1.3.2
+11 silly lifecycle cfcmcalendar@1.3.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\GIGABYTE\\AppData\\Roaming\\npm-cache\\cfcmcalendar\\1.3.2\\package.tgz',
+12 verbose tar pack   'K:\\laodong\\es-calendar\\calendar' ]
+13 verbose tarball C:\Users\GIGABYTE\AppData\Roaming\npm-cache\cfcmcalendar\1.3.2\package.tgz
+14 verbose folder K:\laodong\es-calendar\calendar
+15 verbose addLocalTarball adding from inside cache C:\Users\GIGABYTE\AppData\Roaming\npm-cache\cfcmcalendar\1.3.2\package.tgz
+16 verbose correctMkdir C:\Users\GIGABYTE\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd cfcmcalendar@1.3.2
+18 verbose afterAdd C:\Users\GIGABYTE\AppData\Roaming\npm-cache\cfcmcalendar\1.3.2\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\GIGABYTE\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\GIGABYTE\AppData\Roaming\npm-cache\cfcmcalendar\1.3.2\package\package.json written
+21 silly publish { name: 'cfcmcalendar',
+21 silly publish   version: '1.3.2',
+21 silly publish   description: 'test',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   author: { name: 'cfcm' },
+21 silly publish   license: 'ISC',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/ylws/es-calendar.git' },
+21 silly publish   keywords: [ 'vue', 'calendar' ],
+21 silly publish   bugs: { url: 'https://github.com/ylws/es-calendar/issues' },
+21 silly publish   homepage: 'https://github.com/ylws/es-calendar#readme',
+21 silly publish   readme: '# 1.原生js文件导出实例化方法（可传参）\r\n\texport function CFCMCalendar(param) {\r\n\t\treturn new CFCMCalendar(param)\r\n\t}\r\n# 2.npm包index文件接收CFCMCalendar参数，并把该参数添加到vue原型对象里面\r\n\timport {CFCMCalendar} from \'./src/Plugins_es6_calendar.babel.min.js\'\r\n\texport default {\r\n\t \tinstall: function(Vue, name = \'$Calendar\') {\r\n \t\t Object.defineProperty(Vue.prototype, name, { value: CFCMCalendar });\r\n\t  }\r\n\t}\r\n# 3.发布npm包（eg:cfcmcalendar）\r\n# 4.npm安装cfcmcalendar\r\n# 5.在路由中引入CFCMescroll,并使用vue.use()安装js插件（安装 Vue.js 插件。如果插件是一个对象，必须提供 install 方法。如果插件是一个函数，它会被作为 install 方法。install 方法将被作为 Vue 的参数调用。）\r\n\timport CFCMCalendar from \'cfcmalendar\'\r\n\tVue.use(CFCMCalendar)\r\n# 6.定义scroll.vue文件如下（需要注意的是，使用方法一定要放到mounted方法里面）\r\n\t\r\n\t<script type="text/javascript">\r\n\texport default {\r\n\t  name: \'Scroll\',\r\n\t  data () {\r\n\t    return {\r\n\t      msg: \'信息\'\r\n\t    }\r\n\t  },\r\n\t  mounted: function () {\r\n\t    console.log(this.$Calendar())\r\n\t  }\r\n\t}\r\n\t</script>\r\n# 7.将该单文件放置到需要嵌入的组件即可。\r\n# 注意事项：\r\n\t样式表需要自行引入。\r\n\t以上说明针对vue使用',
+21 silly publish   readmeFilename: 'readme.md',
+21 silly publish   _id: 'cfcmcalendar@1.3.2',
+21 silly publish   _shasum: '39a13b4dc8b7e7c6f0f0bdea515e3cfb1c0f778d',
+21 silly publish   _from: 'calendar',
+21 silly publish   _resolved: 'file:calendar' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name cfcmcalendar
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'cfcmcalendar',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'cfcmcalendar',
+26 silly mapToRegistry   name: 'cfcmcalendar',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/cfcmcalendar
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\GIGABYTE\AppData\Roaming\npm-cache\cfcmcalendar\1.3.2\package.tgz
+30 verbose request uri https://registry.npmjs.org/cfcmcalendar
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 16:47:12
+33 verbose request using bearer token for auth
+34 verbose request id edd7a8b2c01bf111
+35 http request PUT https://registry.npmjs.org/cfcmcalendar
+36 http 504 https://registry.npmjs.org/cfcmcalendar
+37 verbose bad json <html><body><h1>504 Gateway Time-out</h1>
+37 verbose bad json The server didn't respond in time.
+37 verbose bad json </body></html>
+38 error registry error parsing json
+39 verbose headers { 'content-type': 'text/html',
+39 verbose headers   'cache-control': 'max-age=300',
+39 verbose headers   'transfer-encoding': 'chunked',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Sat, 24 Feb 2018 08:48:05 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-hnd18738-HND',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1519462035.712312,VS0,VE50521',
+39 verbose headers   vary: 'Accept-Encoding, Accept' }
+40 info retry will retry, error on last attempt: SyntaxError: Unexpected token < in JSON at position 0
+40 info retry <html><body><h1>504 Gateway Time-out</h1>
+40 info retry The server didn't respond in time.
+40 info retry </body></html>
+41 info attempt registry request try #2 at 16:48:14
+42 verbose request using bearer token for auth
+43 http request PUT https://registry.npmjs.org/cfcmcalendar
+44 http 403 https://registry.npmjs.org/cfcmcalendar
+45 verbose headers { 'content-type': 'application/json',
+45 verbose headers   'cache-control': 'max-age=300',
+45 verbose headers   'content-length': '93',
+45 verbose headers   'accept-ranges': 'bytes',
+45 verbose headers   date: 'Sat, 24 Feb 2018 08:48:25 GMT',
+45 verbose headers   via: '1.1 varnish',
+45 verbose headers   connection: 'keep-alive',
+45 verbose headers   'x-served-by': 'cache-hnd18750-HND',
+45 verbose headers   'x-cache': 'MISS',
+45 verbose headers   'x-cache-hits': '0',
+45 verbose headers   'x-timer': 'S1519462096.975407,VS0,VE9292',
+45 verbose headers   vary: 'Accept-Encoding, Accept' }
+46 verbose request invalidating C:\Users\GIGABYTE\AppData\Roaming\npm-cache\registry.npmjs.org\cfcmcalendar on PUT
+47 error publish Failed PUT 403
+48 verbose stack Error: You cannot publish over the previously published versions: 1.3.2. : cfcmcalendar
+48 verbose stack     at makeError (J:\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+48 verbose stack     at CachingRegistryClient.<anonymous> (J:\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+48 verbose stack     at Request._callback (J:\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+48 verbose stack     at Request.self.callback (J:\node\node_modules\npm\node_modules\request\request.js:187:22)
+48 verbose stack     at emitTwo (events.js:106:13)
+48 verbose stack     at Request.emit (events.js:191:7)
+48 verbose stack     at Request.<anonymous> (J:\node\node_modules\npm\node_modules\request\request.js:1048:10)
+48 verbose stack     at emitOne (events.js:96:13)
+48 verbose stack     at Request.emit (events.js:188:7)
+48 verbose stack     at IncomingMessage.<anonymous> (J:\node\node_modules\npm\node_modules\request\request.js:969:12)
+49 verbose statusCode 403
+50 verbose pkgid cfcmcalendar
+51 verbose cwd K:\laodong\es-calendar
+52 error Windows_NT 10.0.15063
+53 error argv "J:\\node\\node.exe" "J:\\node\\node_modules\\npm\\bin\\npm-cli.js" "publish" "calendar"
+54 error node v6.10.3
+55 error npm  v3.10.10
+56 error code E403
+57 error You cannot publish over the previously published versions: 1.3.2. : cfcmcalendar
+58 error If you need help, you may report this error at:
+58 error     <https://github.com/npm/npm/issues>
+59 verbose exit [ 1, true ]
